@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <RootNamespace>Darnton.Units</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Darnton.Units</PackageId>
+    <Version>0.1</Version>
+    <Authors>Bernard Darnton</Authors>
+    <Company></Company>
+    <Copyright>2020 Bernard Darnton</Copyright>
+    <Description>Library for unit conversion.</Description>
+    <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <FileVersion>0.0.1.0</FileVersion>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)..\*.nupkg&quot; &quot;C:\LocalNuGet&quot; /y" />
+  </Target>
+
+</Project>
