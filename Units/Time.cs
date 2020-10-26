@@ -2,16 +2,21 @@
 
 namespace Darnton.Units
 {
+    /// <summary>
+    /// The Time class contains extension methods for converting from
+    /// one time unit or format to another. The base unit for conversions
+    /// it the .NET tick, equal to 100 nanoseconds.
+    /// </summary>
     public static class Time
     {
         // Base unit: Ticks (1 tick = 100 nanoseconds)
-        public const long UnixEpochTicks = 621355968000000000;
+        private const long UnixEpochTicks = 621355968000000000;
         private const long TicksPerSecond = 10000000;
 
         /// <summary>
         /// Converts from a Unix timestamp to the base unit (.NET ticks).
         /// </summary>
-        /// <param name="unixTimestamp">The number of seconds since midnight on 1st January, 1970</param>
+        /// <param name="unixTime">The number of seconds since midnight on 1st January, 1970</param>
         /// <returns>The number of ticks represented by the timestamp</returns>
         public static long FromUnixTime(this long unixTime) => unixTime * TicksPerSecond + UnixEpochTicks;
 

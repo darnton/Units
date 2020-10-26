@@ -18,13 +18,13 @@ namespace UnitTests
         }
 
         [Fact]
-        public void ConvertUnixBilleniumToDateTimeOffset()
+        public void ConvertUnixBillenniumToDateTimeOffset()
         {
             long elapsedSeconds = 1000000000;
-            var billeniumDateTimeOffset = new DateTimeOffset(2001, 9, 9, 1, 46, 40, TimeSpan.Zero);
+            var billenniumDateTimeOffset = new DateTimeOffset(2001, 9, 9, 1, 46, 40, TimeSpan.Zero);
             var result = elapsedSeconds.FromUnixTime().ToDateTimeOffset();
 
-            Assert.Equal(billeniumDateTimeOffset, result);
+            Assert.Equal(billenniumDateTimeOffset, result);
         }
     }
 }

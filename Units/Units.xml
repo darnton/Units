@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Units</name>
+    </assembly>
+    <members>
+        <member name="T:Darnton.Units.Time">
+            <summary>
+            The Time class contains extension methods for converting from
+            one time unit or format to another. The base unit for conversions
+            it the .NET tick, equal to 100 nanoseconds.
+            </summary>
+        </member>
+        <member name="M:Darnton.Units.Time.FromUnixTime(System.Int64)">
+            <summary>
+            Converts from a Unix timestamp to the base unit (.NET ticks).
+            </summary>
+            <param name="unixTime">The number of seconds since midnight on 1st January, 1970</param>
+            <returns>The number of ticks represented by the timestamp</returns>
+        </member>
+        <member name="M:Darnton.Units.Time.ToDateTimeOffset(System.Int64,System.Int64)">
+            <summary>
+            Creates a new DateTimeOffset structure representing the tick count.
+            </summary>
+            <param name="ticks">The number of ticks</param>
+            <param name="offsetTicks">The time zone offset in ticks. Defaults to zero, representing UTC</param>
+            <returns>A new DateTime structure</returns>
+        </member>
+    </members>
+</doc>
