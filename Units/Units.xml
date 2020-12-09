@@ -4,27 +4,78 @@
         <name>Units</name>
     </assembly>
     <members>
+        <member name="M:Darnton.Units.Numbers.Million(System.Int32)">
+            <summary>
+            Multiplies a number by a million.
+            </summary>
+            <param name="number">The base number.</param>
+            <returns>The base number multiplied by a million.</returns>
+        </member>
+        <member name="M:Darnton.Units.Numbers.Million(System.Int64)">
+            <summary>
+            Multiplies a number by a million.
+            </summary>
+            <param name="number">The base number.</param>
+            <returns>The base number multiplied by a million.</returns>
+        </member>
+        <member name="T:Darnton.Units.Speed">
+            <summary>
+            The Speed class contains extension methods for converting from
+            one sped unit or format to another. The base unit for conversions
+            is metres per second.
+            </summary>
+        </member>
+        <member name="M:Darnton.Units.Speed.FromMetresPerSecond(System.Int32)">
+            <summary>
+            Converts from metres per second to the base unit (metres per second).
+            The identity conversion, used to make source units explicit in the code.
+            </summary>
+            <param name="speed">The speed in metres per second.</param>
+            <returns>The speed in metres per second.</returns>
+        </member>
+        <member name="M:Darnton.Units.Speed.FromMetresPerSecond(System.Decimal)">
+            <summary>
+            Converts from metres per second to the base unit (metres per second).
+            The identity conversion, used to make source units explicit in the code.
+            </summary>
+            <param name="speed">The speed in metres per second.</param>
+            <returns>The speed in metres per second.</returns>
+        </member>
+        <member name="M:Darnton.Units.Speed.ToKilometresPerHour(System.Decimal)">
+            <summary>
+            Converts from metres per second to kilometres per hour.
+            </summary>
+            <param name="speed">The speed in metres per second.</param>
+            <returns>The speed in kilometres per hour.</returns>
+        </member>
         <member name="T:Darnton.Units.Time">
             <summary>
             The Time class contains extension methods for converting from
             one time unit or format to another. The base unit for conversions
-            it the .NET tick, equal to 100 nanoseconds.
+            is the .NET tick, equal to 100 nanoseconds.
             </summary>
+        </member>
+        <member name="M:Darnton.Units.Time.FromSeconds(System.Int64)">
+            <summary>
+            Converts a time in seconds to the base unit (.NET ticks).
+            </summary>
+            <param name="seconds">The number of seconds.</param>
+            <returns>The numbers of ticks.</returns>
         </member>
         <member name="M:Darnton.Units.Time.FromUnixTime(System.Int64)">
             <summary>
             Converts from a Unix timestamp to the base unit (.NET ticks).
             </summary>
-            <param name="unixTime">The number of seconds since midnight on 1st January, 1970</param>
-            <returns>The number of ticks represented by the timestamp</returns>
+            <param name="unixTime">The number of seconds since midnight on 1st January, 1970.</param>
+            <returns>The number of ticks represented by the timestamp.</returns>
         </member>
         <member name="M:Darnton.Units.Time.ToDateTimeOffset(System.Int64,System.Int64)">
             <summary>
             Creates a new DateTimeOffset structure representing the tick count.
             </summary>
-            <param name="ticks">The number of ticks</param>
-            <param name="offsetTicks">The time zone offset in ticks. Defaults to zero, representing UTC</param>
-            <returns>A new DateTime structure</returns>
+            <param name="ticks">The number of ticks.</param>
+            <param name="offsetTicks">The time zone offset in ticks. Defaults to zero, representing UTC.</param>
+            <returns>A new DateTimeOffset structure</returns>
         </member>
     </members>
 </doc>
