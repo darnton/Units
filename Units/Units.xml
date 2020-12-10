@@ -4,6 +4,12 @@
         <name>Units</name>
     </assembly>
     <members>
+        <member name="T:Darnton.Units.Numbers">
+            <summary>
+            The Numbers class contains utility methods for manipulating numbers
+            to make code easier to read.
+            </summary>
+        </member>
         <member name="M:Darnton.Units.Numbers.Million(System.Int32)">
             <summary>
             Multiplies a number by a million.
@@ -54,6 +60,13 @@
             one time unit or format to another. The base unit for conversions
             is the .NET tick, equal to 100 nanoseconds.
             </summary>
+        </member>
+        <member name="M:Darnton.Units.Time.FromSeconds(System.Int32)">
+            <summary>
+            Converts a time in seconds to the base unit (.NET ticks).
+            </summary>
+            <param name="seconds">The number of seconds.</param>
+            <returns>The numbers of ticks.</returns>
         </member>
         <member name="M:Darnton.Units.Time.FromSeconds(System.Int64)">
             <summary>

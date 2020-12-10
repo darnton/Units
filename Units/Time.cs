@@ -18,6 +18,13 @@ namespace Darnton.Units
         /// </summary>
         /// <param name="seconds">The number of seconds.</param>
         /// <returns>The numbers of ticks.</returns>
+        public static long FromSeconds(this int seconds) => seconds * TicksPerSecond;
+
+        /// <summary>
+        /// Converts a time in seconds to the base unit (.NET ticks).
+        /// </summary>
+        /// <param name="seconds">The number of seconds.</param>
+        /// <returns>The numbers of ticks.</returns>
         public static long FromSeconds(this long seconds) => seconds * TicksPerSecond;
 
         /// <summary>

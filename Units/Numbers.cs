@@ -1,5 +1,9 @@
 ﻿namespace Darnton.Units
 {
+    /// <summary>
+    /// The Numbers class contains utility methods for manipulating numbers
+    /// to make code easier to read.
+    /// </summary>
     public static class Numbers
     {
         /// <summary>

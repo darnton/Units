@@ -9,7 +9,16 @@ namespace UnitTests
         private static DateTimeOffset UnixEpoch = new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero);
 
         [Fact]
-        public void ConvertSecondsToTicks()
+        public void ConvertSecondsAsIntToTicks()
+        {
+            int elapsedSeconds = 10;
+            var result = elapsedSeconds.FromSeconds();
+
+            Assert.Equal(100.Million(), result);
+        }
+
+        [Fact]
+        public void ConvertSecondsAsLongToTicks()
         {
             long elapsedSeconds = 10;
             var result = elapsedSeconds.FromSeconds();
